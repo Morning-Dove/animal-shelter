@@ -43,6 +43,7 @@ async def update_shelter(name: str, updated_shelter: Shelter) -> None:
         if name == shelter.name:
             shelter.address = updated_shelter.address
             shelter.animals = updated_shelter.animals
+    shelters.append(updated_shelter)
 
 
 @app.delete("/shelters/{name}")
